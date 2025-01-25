@@ -26,7 +26,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleIncendiary
   - type: Sprite
-    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/incendiary.rsi
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/m492incendiary.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
@@ -54,7 +54,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifleUranium
   - type: Sprite
-    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/uranium.rsi
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/m492uranium.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
@@ -69,7 +69,7 @@
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifle
   - type: Sprite
-    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/red.rsi
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/m492red.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
