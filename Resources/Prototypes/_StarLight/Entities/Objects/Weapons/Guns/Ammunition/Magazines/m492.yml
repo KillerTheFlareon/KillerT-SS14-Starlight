@@ -1,0 +1,77 @@
+- type: entity
+  id: MagazineM492Base
+  name: "M492 Magazine Box"
+  parent: BaseMagazineLightRifle
+  components:
+  - type: Tag
+    tags:
+      - MagazineM492
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 80
+  - type: Item
+  - type: Sprite
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: M492MagazineIncendiary
+  name: "M492 Magazine Box (.30 rifle incendiary)"
+  parent: MagazineM492Base
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleIncendiary
+  - type: Sprite
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/incendiary
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: M492MagazineEmpty
+  name: "M492 Magazine Box (.30 rifle any)"
+  suffix: empty
+  parent: MagazineM492Base
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+
+- type: entity
+  id: M492MagazineUranium
+  name: "M492 Magazine Box (.30 rifle uranium)"
+  parent: MagazineM492Base
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleUranium
+  - type: Sprite
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/uranium
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: M492Magazine
+  name: "M492 Magazine Box (.30 rifle)"
+  parent: MagazineM492Base
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+  - type: Sprite
+    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi/red
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance

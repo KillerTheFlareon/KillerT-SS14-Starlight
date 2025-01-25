@@ -786,6 +786,8 @@
       - MagazineBoxPistolPractice
       - MagazineBoxRifle
       - MagazineBoxRiflePractice
+      - M492Magazine
+      - M492MagazineEmpty
       - MagazineLightRifle
       - MagazineLightRifleEmpty
       - MagazinePistol
@@ -831,6 +833,8 @@
       - MagazineBoxRifleIncendiary
       - MagazineBoxRifleUranium
       - MagazineGrenadeEmpty
+      - M492MagazineIncendiary
+      - M492MagazineUranium
       - MagazineLightRifleIncendiary
       - MagazineLightRifleUranium
       - MagazinePistolIncendiary

@@ -35,6 +35,7 @@
   - MagazineBoxMagnumIncendiary
   - MagazineBoxLightRifleIncendiary
   - MagazineBoxRifleIncendiary
+  - M492MagazineIncendiary
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -92,7 +93,7 @@
   - MagazineBoxLightRifleUranium
   - MagazineBoxRifleUranium
   - BoxShotgunUranium
-
+  - M492MagazineUranium
 - type: technology
   id: AdvancedRiotControl
   name: research-technology-advanced-riot-control

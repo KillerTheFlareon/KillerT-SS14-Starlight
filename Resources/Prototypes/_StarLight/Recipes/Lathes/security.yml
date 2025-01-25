@@ -80,7 +80,41 @@
   materials:
     Steel: 350
     Plastic: 600
+
+- type: latheRecipe
+  id: M492Magazine
+  result: M492Magazine
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 1580
     
+- type: latheRecipe
+  id: M492MagazineEmpty
+  result: M492MagazineEmpty
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 45
+
+- type: latheRecipe
+  id: M492MagazineUranium
+  result: M492MagazineUranium
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 25
+    Plastic: 980
+    Uranium: 980
+
+- type: latheRecipe
+  id: M492MagazineIncendiary
+  result: M492MagazineIncendiary
+  category: Ammo
+  completetime: 5
+  materials:
+    Steel: 45
+    Plastic: 1510
 ## Weapons
 
 - type: latheRecipe
