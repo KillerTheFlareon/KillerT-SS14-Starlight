@@ -11,7 +11,7 @@
     capacity: 80
   - type: Item
   - type: Sprite
-    sprite: _StarLight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi
+    sprite: _Starlight/Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/m492.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 8
