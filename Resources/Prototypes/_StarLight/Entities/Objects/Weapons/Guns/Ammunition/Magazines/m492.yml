@@ -1,11 +1,11 @@
 - type: entity
-  id: MagazineM492Base
-  name: "M492 Magazine Box"
+  id: UniversalMagazineBase
+  name: ".30 Universal Magazine Box"
   parent: BaseMagazineLightRifle
   components:
   - type: Tag
     tags:
-      - MagazineM492
+      - UniversalMagazine
   - type: BallisticAmmoProvider
     proto: CartridgeLightRifle
     capacity: 80
@@ -19,8 +19,8 @@
   - type: Appearance
 
 - type: entity
-  id: M492MagazineIncendiary
-  name: "M492 Magazine Box (.30 rifle incendiary)"
+  id: UniversalMagazineIncendiary
+  name: "Universal Magazine Box (.30 rifle incendiary)"
   parent: MagazineM492Base
   components:
   - type: BallisticAmmoProvider
@@ -34,8 +34,8 @@
   - type: Appearance
 
 - type: entity
-  id: M492MagazineEmpty
-  name: "M492 Magazine Box (.30 rifle any)"
+  id: UniversalMagazineEmpty
+  name: "Universal Magazine Box (.30 rifle any)"
   suffix: empty
   parent: MagazineM492Base
   components:
@@ -47,8 +47,8 @@
       map: ["enum.GunVisualLayers.Base"]
 
 - type: entity
-  id: M492MagazineUranium
-  name: "M492 Magazine Box (.30 rifle uranium)"
+  id: UniversalMagazineUranium
+  name: "Universal Magazine Box (.30 rifle uranium)"
   parent: MagazineM492Base
   components:
   - type: BallisticAmmoProvider
@@ -62,8 +62,8 @@
   - type: Appearance
 
 - type: entity
-  id: M492Magazine
-  name: "M492 Magazine Box (.30 rifle)"
+  id: UniversalMagazineA
+  name: "Universal Magazine Box (.30 rifle)"
   parent: MagazineM492Base
   components:
   - type: BallisticAmmoProvider
