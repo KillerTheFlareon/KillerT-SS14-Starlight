@@ -1,0 +1,26 @@
+- type: entity
+  name: Miniature Hypospray
+  parent: [BaseItem, BaseSecurityContraband]
+  description: A compact sterile injector for rapid chemical injection in combat situations.
+  id: BrigHypo
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/hypospray.rsi
+    state: hypo
+  - type: Item
+    sprite: _Starlight/Objects/Specific/Medical/hypospray.rsi
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 5
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice
+    price: 750

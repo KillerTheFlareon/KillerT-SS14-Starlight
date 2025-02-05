@@ -1,0 +1,10 @@
+- type: entity
+  id: SecurityHypoKitFilled
+  suffix: Filled
+  parent: SecurityHypoKit
+  components:
+  - type: StorageFill
+    contents:
+      - id: BrigHypo
+      - id: ReinforcedEmptyChemistryVial
+        amount: 8

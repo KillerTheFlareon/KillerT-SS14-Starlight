@@ -504,3 +504,31 @@
   - type: Tag
     tags:
     - Medkit
+
+- type: entity
+  name: Miniature Hypospray Case
+  description: A blast-resistant case to protect fragile glassware within for use inside the hypospray. #this is a lie since I can't add explosive damage resist.
+  parent: BaseStorageItem
+  id: SecurityHypoKit
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/firstaidkits.rsi
+    state: HypoKit
+  - type: Storage
+    whitelist:
+      tags:
+        - Vial
+      components:
+        - Hypospray
+    grid:
+    - 0,0,2,2
+  - type: Item
+    size: Normal
+    sprite: _Starlight/Objects/Specific/Medical/firstaidkits.rsi
+    heldPrefix: HypoKit
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 150
+  - type: Tag
+    tags:
+    - Medkit

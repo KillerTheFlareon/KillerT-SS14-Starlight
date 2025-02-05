@@ -17,6 +17,17 @@
     {
       "name": "BrigKube-inhand-left",
       "directions": 4
+    },
+    {
+      "name": "HypoKit"
+    },
+    {
+      "name": "HypoKit-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "HypoKit-inhand-left",
+      "directions": 4
     }
   ]
 }
