@@ -4,7 +4,13 @@
   id: BaseMobResomi
   abstract: true
   components:
+  - type: Absorbable
   - type: ResomiSkill
+  - type: Fixtures
+    fixtures:
+      fix1:
+        layer:
+        - FlyingMobLayer
   - type: DamageVisuals
     thresholds: [ 10, 30, 50, 70]
     targetLayers:
