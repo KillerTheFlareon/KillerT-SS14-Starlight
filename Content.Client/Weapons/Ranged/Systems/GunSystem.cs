@@ -57,7 +57,6 @@ public sealed partial class GunSystem : SharedGunSystem
     [Dependency] private readonly InputSystem _inputSystem = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _recoil = default!;
     [Dependency] private readonly SharedMapSystem _maps = default!;
-    [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly DisplacementMapSystem _displacement = default!;
 
     [ValidatePrototypeId<EntityPrototype>]
@@ -180,7 +179,7 @@ public sealed partial class GunSystem : SharedGunSystem
         if (!TryComp<SpriteComponent>(target, out var sprite))
             return;
 
-        if (!TryComp(coords.EntityId, out TransformComponent? relativeXform))
+        if (Deleted(coords.EntityId))
             return;
 
         if (!sprite!.AllLayers.TryFirstOrDefault(x => (x.ActualRsi ?? x.Rsi) != null && x.RsiState != null, out var layer))
@@ -191,12 +190,8 @@ public sealed partial class GunSystem : SharedGunSystem
 
         var ent = Spawn(ImpactProto, coords);
         var spriteComp = Comp<SpriteComponent>(ent);
-        
         var xform = Transform(ent);
-        var targetWorldRot = angle + _xform.GetWorldRotation(relativeXform);
-        var delta = targetWorldRot - _xform.GetWorldRotation(xform);
-        _xform.SetLocalRotationNoLerp(ent, xform.LocalRotation + delta, xform);
-        
+        xform.LocalRotation = angle;
         spriteComp.LayerSetRSI("unshaded", (layer!.ActualRsi ?? layer.Rsi)!);
         spriteComp.LayerSetState("unshaded", layer.RsiState);
         spriteComp["unshaded"].Visible = true;
@@ -212,17 +207,13 @@ public sealed partial class GunSystem : SharedGunSystem
 
         var coords = GetCoordinates(coordinates);
 
-        if (!TryComp(coords.EntityId, out TransformComponent? relativeXform))
+        if (Deleted(coords.EntityId))
             return;
 
         var ent = Spawn(HitscanProto, coords);
         var spriteComp = Comp<SpriteComponent>(ent);
-        
         var xform = Transform(ent);
-        var targetWorldRot = angle + _xform.GetWorldRotation(relativeXform);
-        var delta = targetWorldRot - _xform.GetWorldRotation(xform);
-        _xform.SetLocalRotationNoLerp(ent, xform.LocalRotation + delta, xform);
-        
+        xform.LocalRotation = angle;
         spriteComp[EffectLayers.Unshaded].AutoAnimated = false;
         spriteComp.LayerSetSprite(EffectLayers.Unshaded, rsi);
         spriteComp.LayerSetState(EffectLayers.Unshaded, rsi.RsiState);
@@ -282,17 +273,13 @@ public sealed partial class GunSystem : SharedGunSystem
 
         var coords = GetCoordinates(coordinates);
 
-        if (!TryComp(coords.EntityId, out TransformComponent? relativeXform))
+        if (Deleted(coords.EntityId))
             return;
 
         var ent = Spawn(HitscanProto, coords);
         var spriteComp = Comp<SpriteComponent>(ent);
-        
         var xform = Transform(ent);
-        var targetWorldRot = angle + _xform.GetWorldRotation(relativeXform);
-        var delta = targetWorldRot - _xform.GetWorldRotation(xform);
-        _xform.SetLocalRotationNoLerp(ent, xform.LocalRotation + delta, xform);
-        
+        xform.LocalRotation = angle;
         spriteComp[EffectLayers.Unshaded].AutoAnimated = false;
         spriteComp.LayerSetSprite(EffectLayers.Unshaded, rsi);
         spriteComp.LayerSetState(EffectLayers.Unshaded, rsi.RsiState);

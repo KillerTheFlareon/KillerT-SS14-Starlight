@@ -111,6 +111,8 @@
         amount: 2
       - id: FrenchHornInstrument
         amount: 2
+      - id: SaxophoneInstrument
+        amount: 2
       - id: EuphoniumInstrument
       - id: TubaInstrument
 
@@ -146,8 +148,6 @@
       - id: ClarinetInstrument
       - id: FluteInstrument
       - id: HarmonicaInstrument
-        amount: 2
-      - id: SaxophoneInstrument
         amount: 2
       - id: OcarinaInstrument
       - id: PanFluteInstrument

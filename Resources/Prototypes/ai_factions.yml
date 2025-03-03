@@ -13,7 +13,6 @@
     - Vampire
     - Changeling
     - AllHostile
-    - Wizard
 
 - type: npcFaction
   id: NanoTrasen
@@ -29,7 +28,6 @@
   - Vampire
   - Changeling
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: Mouse
@@ -37,7 +35,6 @@
   - PetsNT
   - Abyss
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: Passive
@@ -51,7 +48,6 @@
   - Xeno
   - Abyss
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: SimpleHostile
@@ -68,7 +64,6 @@
   - Vampire
   - Changeling
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: SimpleNeutral
@@ -87,7 +82,6 @@
   - Vampire
   - Changeling
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: Xeno
@@ -104,7 +98,6 @@
   - Vampire
   - Changeling
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: Zombie
@@ -122,7 +115,6 @@
   - Vampire
   - Changeling
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: Revolutionary
@@ -167,7 +159,6 @@
   - PetsNT
   - Zombie
   - AllHostile
-  - Wizard
 
 - type: npcFaction
   id: HonkNeutral
@@ -196,20 +187,4 @@
   - HonkHostile
   - Vampire
   - Changeling
-  - Wizard
 
-- type: npcFaction
-  id: Wizard
-  hostile:
-  - NanoTrasen
-  - Dragon
-  - Mouse
-  - Passive
-  - PetsNT
-  - SimpleHostile
-  - SimpleNeutral
-  - Syndicate
-  - Xeno
-  - Zombie
-  - Revolutionary
-  - AllHostile

@@ -10,10 +10,8 @@ using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Shared.Shuttles.Components;
 using Robust.Server.GameObjects;
+using Robust.Server.Maps;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
-using Robust.Shared.EntitySerialization.Systems;
-using Robust.Shared.EntitySerialization;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Starlight.GammaWeaponry;
@@ -42,10 +40,10 @@ public sealed class GammaWeaponrySystem : EntitySystem
     private void InitializeGammaWeaponryStation(EntityUid uid, GammaWeaponryStationComponent comp, StationPostInitEvent ev)
     {
         var map = CreateNewMap();
-        if (!TryLoadShuttle(map, new ResPath("Maps/_Starlight/Shuttles/GammaWeaponry.yml"), out var shuttleUid) || shuttleUid == null)
+        if (!TryLoadShuttle(map, new ResPath("Maps/_Starlight/Shuttles/GammaWeaponry.yml"), out var shuttleUids))
             return;
 
-        SetupShuttle(uid, shuttleUid.Value.Owner, comp);
+        SetupShuttle(uid, shuttleUids[0], comp);
     }
 
     private MapId CreateNewMap()
@@ -53,10 +51,10 @@ public sealed class GammaWeaponrySystem : EntitySystem
         return _mapManager.CreateMap();
     }
 
-    private bool TryLoadShuttle(MapId map, ResPath path, [NotNullWhen(true)] out Entity<MapGridComponent>? shuttleUid)
+    private bool TryLoadShuttle(MapId map, ResPath path, [NotNullWhen(true)] out IReadOnlyList<EntityUid>? shuttleUids)
     {
-        var loadOptions = new DeserializationOptions { StoreYamlUids = true };
-        return _loader.TryLoadGrid(map, path, out shuttleUid, loadOptions);
+        var loadOptions = new MapLoadOptions { LoadMap = true, StoreMapUids = true };
+        return _loader.TryLoad(map, path.ToString(), out shuttleUids, loadOptions);
     }
 
     private void SetupShuttle(EntityUid stationUid, EntityUid shuttleUid, GammaWeaponryStationComponent comp)
